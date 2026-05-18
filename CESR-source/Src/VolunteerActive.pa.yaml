@@ -1,0 +1,745 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  VolunteerActive:
+    Properties:
+      Fill: =RGBA(214, 221, 224, 0.32)
+      OnVisible: |-
+        =Set(showEmergencyPopup, true);
+        Set(waitingForNextEmergency, false);
+
+        Set(emergencyAge, RandBetween(18, 80));
+
+        Set(
+            emergencyGender,
+            Index(
+                ["Male", "Female"],
+                RandBetween(1, 2)
+            ).Value
+        );
+
+        Set(
+            medicalCondition,
+            Index(
+                [
+                    "None reported",
+                    "I fell and broke my ankle",
+                    "Chest pain",
+                    "Difficulty breathing",
+                    "Feeling dizzy and weak",
+                    "Possible allergic reaction",
+                    "Bleeding from arm",
+                    "Severe headache",
+                    "Sprained knee",
+                    "Unconscious person reported",
+                    "Panic attack",
+                    "Burn injury"
+                ],
+                RandBetween(1, 12)
+            ).Value
+        );
+
+        Set(
+            emergencyLocation,
+            Index(
+                [
+                    "Ascot Avenue, Zetland",
+                    "George Street, Sydney CBD",
+                    "City Road, Camperdown",
+                    "Parramatta Road, Glebe",
+                    "King Street, Newtown",
+                    "Oxford Street, Darlinghurst",
+                    "Cleveland Street, Redfern",
+                    "Harris Street, Pyrmont",
+                    "Anzac Parade, Kensington",
+                    "Bourke Street, Surry Hills"
+                ],
+                RandBetween(1, 10)
+            ).Value
+        );
+
+        Set(
+            emergencyDistance,
+            Round(RandBetween(1, 30) / 10, 1)
+        );
+
+        Set(
+            reportedSeconds,
+            RandBetween(10, 120)
+        );
+
+        Set(
+            emergencyType,
+            Index(
+                [
+                    "Medical emergency",
+                    "Injury",
+                    "Fainting",
+                    "Breathing difficulty",
+                    "Security threat",
+                    "Lost person",
+                    "Fire alert"
+                ],
+                RandBetween(1, 7)
+            ).Value
+        );
+
+        Set(
+            vSavedEmergency,
+            Patch(
+                Incidents_2,
+                Defaults(Incidents_2),
+                {
+                    Title: "Emergency Request",
+                    PatientAge: emergencyAge,
+                    PatientGender: {Value: emergencyGender},
+                    ApproximateLocation: emergencyLocation,
+                    DistanceKm: emergencyDistance,
+                    EmergencyType: {Value: emergencyType},
+                    ReportedSeconds: reportedSeconds,
+                    MedicalCondition: medicalCondition,
+                    Statues: {Value: "Pending"}
+                }
+            )
+        )
+    Children:
+      - Text34_39:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(189, 49, 51, 1)
+            Font: =Font.'Open Sans'
+            FontWeight: =FontWeight.Bold
+            Height: =198
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =27
+            Text: ="New Emergency"
+            Visible: =showEmergencyPopup
+            Width: =640
+            Y: =150
+      - Text33_13:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(122, 138, 143, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0.5
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =659
+            RadiusBottomLeft: =50
+            RadiusBottomRight: =50
+            RadiusTopLeft: =50
+            RadiusTopRight: =50
+            Text: =
+            Width: =640
+            Y: =288
+      - Text33_21:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(180, 214, 250, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =1
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(40, 134, 222, 0.18)
+            Height: =272
+            RadiusBottomLeft: =25
+            RadiusBottomRight: =25
+            RadiusTopLeft: =25
+            RadiusTopRight: =25
+            Text: =
+            Width: =598
+            X: =21
+            Y: =398
+      - Icon25_1:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            Icon: =Icon.BackArrow
+            OnSelect: =Navigate(VolunteerScreen, ScreenTransition.UnCoverRight)
+            X: =40
+            Y: =40
+      - Text33_14:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(122, 138, 143, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0.5
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =209
+            RadiusBottomLeft: =50
+            RadiusBottomRight: =50
+            Text: =
+            Width: =640
+      - Text34_30:
+          Control: ModernText@1.0.0
+          Properties:
+            Color: =RGBA(53, 61, 63, 0.31)
+            Font: =Font.Georgia
+            Height: =52
+            Size: =20
+            Text: ="CESR Responder"
+            Width: =266
+            X: =154
+            Y: =65
+      - Image6_3:
+          Control: Image@2.2.3
+          Properties:
+            Height: =79
+            Image: ='Screenshot 2026-05-12 at 6.56.10 pm'
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Width: =80
+            X: =60
+            Y: =65
+      - Text34_37:
+          Control: ModernText@1.0.0
+          Properties:
+            Color: =RGBA(53, 61, 63, 0.31)
+            Font: =Font.Georgia
+            FontWeight: =FontWeight.Bold
+            Height: =52
+            Size: =25
+            Text: =vResponderName
+            Width: =266
+            X: =149
+            Y: =104
+      - Icon14_2:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            Color: =RGBA(0, 81, 100, 1)
+            Height: =45
+            Icon: =Icon.Person
+            Visible: =showEmergencyPopup
+            Width: =45
+            X: =141
+            Y: =424
+      - Text20_11:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            Font: =Font.Georgia
+            Size: =20
+            Text: ="Someone needs help nearby"
+            Visible: =showEmergencyPopup
+            Width: =356
+            X: =135
+            Y: =317
+      - Text34_38:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            Color: =RGBA(52, 152, 47, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =52
+            Size: =25
+            Text: ="Active"
+            Width: =186
+            X: =415
+            Y: =88
+      - Circle5_4:
+          Control: Circle@2.3.0
+          Properties:
+            Fill: =RGBA(52, 152, 47, 1)
+            Height: =20
+            Width: =20
+            X: =436
+            Y: =108
+      - Text34_40:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            Color: =RGBA(40, 112, 134, 1)
+            Font: =Font.Georgia
+            FontWeight: =FontWeight.Bold
+            Height: =52
+            Size: =30
+            Text: ="Pateint Profile"
+            Visible: =showEmergencyPopup
+            Width: =266
+            X: =183
+            Y: =420
+      - Text20_12:
+          Control: ModernText@1.0.0
+          Properties:
+            Color: =RGBA(40, 112, 134, 1)
+            Font: =Font.Georgia
+            Size: =25
+            Text: |-
+              ="Gender: "
+            Visible: =showEmergencyPopup
+            X: =22
+            Y: =564
+      - Text20_13:
+          Control: ModernText@1.0.0
+          Properties:
+            Color: =RGBA(40, 112, 134, 1)
+            Font: =Font.Georgia
+            Height: =46
+            Size: =25
+            Text: |-
+              ="Age: "
+            Visible: =showEmergencyPopup
+            Width: =336
+            X: =22
+            Y: =508
+      - Circle5_5:
+          Control: Circle@2.3.0
+          Properties:
+            BorderColor: =RGBA(40, 134, 222, 0.58)
+            BorderThickness: =1
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =25
+            Visible: =showEmergencyPopup
+            Width: =25
+            X: =43
+            Y: =629
+      - Text20_14:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            Color: =RGBA(40, 134, 222, 0.57)
+            Font: =Font.'Lato Black'
+            Height: =37
+            Size: =15
+            Text: ="!"
+            Visible: =showEmergencyPopup
+            Width: =17
+            X: =47
+            Y: =623
+      - Rectangle4_4:
+          Control: Rectangle@2.3.0
+          Properties:
+            Fill: =RGBA(0, 0, 0, 1)
+            Height: =0.5
+            Visible: =showEmergencyPopup
+            Width: =575
+            X: =26
+            Y: =614
+      - Text20_15:
+          Control: ModernText@1.0.0
+          Properties:
+            Font: =Font.Georgia
+            Size: =15
+            Text: =
+            X: =76
+            Y: =626
+      - Text20_16:
+          Control: ModernText@1.0.0
+          Properties:
+            Color: =RGBA(40, 112, 134, 1)
+            Font: =Font.Georgia
+            FontWeight: =FontWeight.Semibold
+            Height: =43
+            Size: =20
+            Text: '="Medical condition:" '
+            Visible: =showEmergencyPopup
+            Width: =204
+            X: =74
+            Y: =620
+      - Text20_17:
+          Control: ModernText@1.0.0
+          Properties:
+            Font: =Font.Georgia
+            Height: =60
+            Size: =20
+            Text: ="Location:"
+            Visible: =showEmergencyPopup
+            Width: =155
+            X: =34
+            Y: =716
+      - Text20_18:
+          Control: ModernText@1.0.0
+          Properties:
+            Font: =Font.Georgia
+            Size: =20
+            Text: ="Distance:"
+            Visible: =showEmergencyPopup
+            Width: =157
+            X: =33
+            Y: =781
+      - Text20_19:
+          Control: ModernText@1.0.0
+          Properties:
+            Font: =Font.Georgia
+            Size: =20
+            Text: ="Reported:"
+            Visible: =showEmergencyPopup
+            Width: =108
+            X: =33
+            Y: =853
+      - Rectangle4_5:
+          Control: Rectangle@2.3.0
+          Properties:
+            Fill: =RGBA(53, 61, 63, 1)
+            Height: =0.5
+            Visible: =showEmergencyPopup
+            Width: =575
+            X: =33
+            Y: =778
+      - Rectangle4_6:
+          Control: Rectangle@2.3.0
+          Properties:
+            Fill: =RGBA(53, 61, 63, 1)
+            Height: =0.5
+            Visible: =showEmergencyPopup
+            Width: =575
+            X: =32
+            Y: =839
+      - Rectangle4_7:
+          Control: Rectangle@2.3.0
+          Properties:
+            Fill: =RGBA(53, 61, 63, 1)
+            Height: =0.5
+            Visible: =showEmergencyPopup
+            Width: =575
+            X: =32
+            Y: =917
+      - Button6_1:
+          Control: ModernButton@1.0.0
+          Properties:
+            BasePaletteColor: =RGBA(156, 220, 79, 1)
+            Font: =Font.Georgia
+            Height: =120
+            OnSelect: |-
+              =Set(vAcceptedAge, emergencyAge);
+              Set(vAcceptedGender, emergencyGender);
+              Set(vAcceptedApproxLocation, emergencyLocation);
+              Set(vAcceptedDistance, emergencyDistance);
+              Set(vAcceptedEmergencyType, emergencyType);
+              Set(vAcceptedReportedSeconds, reportedSeconds);
+              Set(vAcceptedMedicalCondition, medicalCondition);
+
+              If(
+                  vAcceptedGender = "Male",
+                  Set(
+                      vAcceptedName,
+                      Index(
+                          [
+                              "Jack Thompson",
+                              "Oliver Harris",
+                              "Noah Wilson",
+                              "William Parker",
+                              "Thomas Mitchell",
+                              "Lachlan Cooper",
+                              "Henry Walker",
+                              "Charlie Bennett"
+                          ],
+                          RandBetween(1, 8)
+                      ).Value
+                  ),
+                  Set(
+                      vAcceptedName,
+                      Index(
+                          [
+                              "Charlotte Wilson",
+                              "Olivia Harris",
+                              "Amelia Parker",
+                              "Mia Thompson",
+                              "Isla Walker",
+                              "Ava Mitchell",
+                              "Matilda Cooper",
+                              "Sophie Bennett"
+                          ],
+                          RandBetween(1, 8)
+                      ).Value
+                  )
+              );
+
+              Set(
+                  vResponderName,
+                  Index(
+                      [
+                          "Daniel Brooks",
+                          "Sophie Turner",
+                          "Ryan Mitchell",
+                          "Emily Carter",
+                          "Ben Walker",
+                          "Grace Wilson",
+                          "Liam Parker",
+                          "Chloe Bennett"
+                      ],
+                      RandBetween(1, 8)
+                  ).Value
+              );
+
+              Set(
+                  vAcceptedExactLocation,
+                  Index(
+                      [
+                          "Building A, Level 2, Room 204",
+                          "Main entrance near security desk",
+                          "Library entrance, left side",
+                          "Car park level B1, near lift",
+                          "Food court, table area",
+                          "Sports field, north gate",
+                          "Lecture hall 3, front row",
+                          "Near bus stop, platform 2"
+                      ],
+                      RandBetween(1, 8)
+                  ).Value
+              );
+
+              Set(vEstimatedTime, RandBetween(1, 15));
+
+              Set(
+                  vSavedEmergency,
+                  Patch(
+                      Incidents_2,
+                      LookUp(Incidents_2, ID = vSavedEmergency.ID),
+                      {
+                          PatientName: vAcceptedName,
+                          ExactLocation: vAcceptedExactLocation,
+                          AssignedResponder: vResponderName,
+                          EstimatedTime: vEstimatedTime,
+                          Statues: {Value: "Accepted"}
+                      }
+                  )
+              );
+
+              Notify("Emergency accepted", NotificationType.Success);
+
+              Navigate(AcceptedEmergencyScreen, ScreenTransition.Fade)
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Text: ="Accept"
+            Width: =232
+            X: =373
+            Y: =982
+      - Text20_20:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Right
+            AutoHeight: =true
+            Color: =RGBA(215, 58, 60, 1)
+            Fill: =RGBA(215, 58, 60, 0.14)
+            Font: =Font.'Lato Black'
+            FontWeight: =FontWeight.Semibold
+            Height: =32
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =16
+            Text: =medicalCondition
+            Visible: =showEmergencyPopup
+            Width: =289
+            X: =312
+            Y: =626
+      - Text34_43:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            Color: =RGBA(53, 61, 63, 0.31)
+            Font: =Font.Georgia
+            FontWeight: =FontWeight.Bold
+            Height: =58
+            Size: =22
+            Text: ="Searching for next emergency..."
+            Visible: =waitingForNextEmergency
+            Width: =489
+            X: =72
+            Y: =532
+      - tmrNextEmergency:
+          Control: Timer@2.1.0
+          Properties:
+            Duration: =3000
+            OnTimerEnd: |-
+              =Set(emergencyAge, RandBetween(18, 80));
+              Set(emergencyGender, Index(["Male", "Female"], RandBetween(1, 2)).Value);
+              Set(medicalCondition, Index(
+                  [
+                      "None reported",
+                      "I fell and broke my ankle",
+                      "Chest pain",
+                      "Difficulty breathing",
+                      "Feeling dizzy and weak",
+                      "Possible allergic reaction",
+                      "Bleeding from arm",
+                      "Severe headache",
+                      "Sprained knee",
+                      "Unconscious person reported",
+                      "Panic attack",
+                      "Burn injury"
+                  ],
+                  RandBetween(1, 12)
+              ).Value);
+              Set(emergencyLocation, Index(
+                  [
+                      "Ascot Avenue, Zetland",
+                      "George Street, Sydney CBD",
+                      "City Road, Camperdown",
+                      "Parramatta Road, Glebe",
+                      "King Street, Newtown",
+                      "Oxford Street, Darlinghurst",
+                      "Cleveland Street, Redfern",
+                      "Harris Street, Pyrmont",
+                      "Anzac Parade, Kensington",
+                      "Bourke Street, Surry Hills"
+                  ],
+                  RandBetween(1, 10)
+              ).Value);
+              Set(emergencyDistance, Round(RandBetween(1, 30) / 10, 1));
+              Set(reportedSeconds, RandBetween(10, 120));
+              Set(emergencyType, Index(
+                  [
+                      "Medical emergency",
+                      "Injury",
+                      "Fainting",
+                      "Breathing difficulty",
+                      "Security threat",
+                      "Lost person",
+                      "Fire alert"
+                  ],
+                  RandBetween(1, 7)
+              ).Value);
+
+              Set(waitingForNextEmergency, false);
+              Set(showEmergencyPopup, true)
+            Start: =waitingForNextEmergency
+            Visible: =
+            X: =80
+            Y: =80
+      - Text33_16:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(122, 138, 143, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0.5
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(245, 29, 0, 1)
+            Font: =Font.Georgia
+            FontWeight: =FontWeight.Bold
+            Height: =120
+            OnSelect: |-
+              =Set(showEmergencyPopup, false);
+              Set(waitingForNextEmergency, true)
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Size: =24
+            Text: ="Decline"
+            Width: =233
+            X: =79
+            Y: =982
+      - Text20_21:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Right
+            Font: =Font.'Lato Black'
+            FontWeight: =FontWeight.Semibold
+            Height: =60
+            Size: =15
+            Text: = emergencyLocation
+            Visible: =showEmergencyPopup
+            Width: =371
+            X: =236
+            Y: =716
+      - Text20_22:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Right
+            Font: =Font.'Lato Black'
+            FontWeight: =FontWeight.Semibold
+            Size: =15
+            Text: = Text(emergencyDistance, "0.0") & " km"
+            Visible: =showEmergencyPopup
+            Width: =379
+            X: =225
+            Y: =781
+      - Text20_23:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Right
+            Font: =Font.'Lato Black'
+            FontWeight: =FontWeight.Semibold
+            Size: =15
+            Text: |-
+              =
+              If(
+                  reportedSeconds < 60,
+                  reportedSeconds & " seconds ago",
+                  RoundDown(reportedSeconds / 60, 0) & " minute ago"
+              )
+            Visible: =showEmergencyPopup
+            Width: =233
+            X: =377
+            Y: =856
+      - Text20_24:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Right
+            Color: =RGBA(40, 112, 134, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Size: =25
+            Text: |-
+              =
+              emergencyGender
+            Visible: =showEmergencyPopup
+            X: =401
+            Y: =566
+      - Text20_25:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Right
+            Color: =RGBA(40, 112, 134, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Bold
+            Height: =46
+            Size: =25
+            Text: =emergencyAge & " years"
+            Visible: =showEmergencyPopup
+            Width: =336
+            X: =265
+            Y: =514
+      - Rectangle4_10:
+          Control: Rectangle@2.3.0
+          Properties:
+            Fill: =RGBA(0, 0, 0, 1)
+            Height: =0.5
+            Visible: =showEmergencyPopup
+            Width: =575
+            X: =29
+            Y: =564
+      - Text20_26:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            Font: =Font.Georgia
+            FontWeight: =FontWeight.Lighter
+            Height: =63
+            Size: =12
+            Text: ="Declining will search for another emergency"
+            Visible: =showEmergencyPopup
+            Width: =265
+            X: =63
+            Y: =933
+      - Icon5_2:
+          Control: ModernIcon@1.1.0
+          Properties:
+            Height: =52
+            Icon: ="ChevronLeft"
+            IconColor: =RGBA(106, 122, 127, 1)
+            OnSelect: =Navigate(VolunteerScreen, ScreenTransition.Fade)
+            Width: =62
+            Y: =13

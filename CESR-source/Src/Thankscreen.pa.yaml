@@ -1,0 +1,34 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  Thankscreen:
+    Properties:
+      Fill: =RGBA(173, 169, 163, 1)
+    Children:
+      - TimertoHomeScreen:
+          Control: Timer@2.1.0
+          Properties:
+            AutoStart: =true
+            Duration: =2000
+            OnTimerEnd: =Navigate(HomeScreen, ScreenTransition.Fade)
+            Visible: =false
+            X: =60
+            Y: =60
+      - Text36:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            Color: =RGBA(53, 61, 63, 1)
+            Font: =Font.Georgia
+            Height: =233
+            Size: =70
+            Text: ="THANK YOU! "
+            Width: =451
+            X: =105
+            Y: =324

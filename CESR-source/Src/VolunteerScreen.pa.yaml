@@ -1,0 +1,294 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  VolunteerScreen:
+    Properties:
+      Fill: =RGBA(247, 250, 252, 1)
+      OnVisible: |-
+        =Set(volunteerActive, false);
+
+        Set(
+            coverageRadius,
+            Round(RandBetween(5, 30) / 10, 1)
+        )
+    Children:
+      - Text33_4:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(122, 138, 143, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0.5
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: |-
+              =If(
+                  tglPowerStatus.Value,
+                  RGBA(46, 125, 50, 1),
+                  RGBA(160, 160, 160, 1)
+              )
+            Height: =248
+            RadiusBottomLeft: =90
+            RadiusBottomRight: =90
+            RadiusTopLeft: =90
+            RadiusTopRight: =90
+            Text: =
+            Width: =248
+            X: =196
+            Y: =271
+      - Text33:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(122, 138, 143, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0.5
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =189
+            RadiusBottomLeft: =50
+            RadiusBottomRight: =50
+            Text: =
+            Width: =640
+      - tglPowerStatus:
+          Control: Classic/Toggle@2.1.0
+          Properties:
+            Default: =volunteerActive
+            FalseText: =""
+            Height: =71
+            OnCheck: =Set(volunteerActive, true)
+            OnUncheck: =Set(volunteerActive, false)
+            TrueFill: |-
+              =If(
+                  tglPowerStatus.Value,
+                  RGBA(46, 125, 50, 1),
+                  RGBA(160, 160, 160, 1)
+              )
+            TrueText: =""
+            Width: =203
+            X: =260
+            Y: =702
+      - Text34:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            Color: =RGBA(0, 0, 0, 1)
+            Font: =Font.Georgia
+            FontWeight: =FontWeight.Bold
+            Height: =84
+            Size: =45
+            Text: ="Responder Status"
+            Width: =503
+            X: =68
+            Y: =523
+      - Circle sdq:
+          Control: Circle@2.3.0
+          Properties:
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =11
+            Fill: |-
+              =If(
+                  tglPowerStatus.Value,
+                  RGBA(46, 125, 50, 1),
+                  RGBA(160, 160, 160, 1)
+              )
+            Height: =190
+            OnSelect: =
+            Width: =190
+            X: =225
+            Y: =293
+      - Circle5_1:
+          Control: Circle@2.3.0
+          Properties:
+            BorderColor: =RGBA(247, 250, 252, 1)
+            BorderStyle: =BorderStyle.None
+            Fill: |-
+              =If(
+                  tglPowerStatus.Value,
+                  RGBA(46, 125, 50, 1),
+                  RGBA(160, 160, 160, 1)
+              )
+            Height: =127
+            OnSelect: =
+            Width: =190
+            X: =225
+            Y: =279
+      - Text33_3:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            Color: |-
+              =If(
+                  tglPowerStatus.Value,
+                  RGBA(144, 238, 144, 1),
+                  RGBA(160, 160, 160, 1)
+              )
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =107
+            RadiusBottomLeft: =50
+            RadiusBottomRight: =50
+            RadiusTopLeft: =50
+            RadiusTopRight: =50
+            Text: =
+            Width: =9
+            X: =316
+            Y: =289
+      - Text34_14:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            Color: =RGBA(0, 0, 0, 1)
+            Font: =Font.Georgia
+            FontWeight: =FontWeight.Bold
+            Height: =93
+            Size: =35
+            Text: ="You are "
+            Width: =367
+            X: =68
+            Y: =609
+      - Text34_15:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            Color: |-
+              =If(
+                  tglPowerStatus.Value,
+                  RGBA(46, 125, 50, 1),
+                  RGBA(97, 2, 2, 1)
+              )
+            Font: =Font.Georgia
+            FontWeight: =FontWeight.Bold
+            Height: =93
+            Size: =35
+            Text: |-
+              =If(
+                  tglPowerStatus.Value,
+                  "Active",
+                  "    Inactive"
+              )
+            Width: =367
+            X: =205
+            Y: =609
+      - Text34_16:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            Color: =RGBA(53, 61, 63, 0.31)
+            Font: =Font.Georgia
+            Height: =66
+            Size: =20
+            Text: |-
+              ="Set yourself active to start helping
+
+              "
+            Width: =327
+            X: =167
+            Y: =213
+      - Icon5_1:
+          Control: ModernIcon@1.1.0
+          Properties:
+            Height: =79
+            Icon: ="Home"
+            IconColor: =RGBA(106, 122, 127, 1)
+            OnSelect: =Navigate(HomeScreen, ScreenTransition.Fade)
+            Width: =79
+            X: =484
+            Y: =55
+      - Text33_6:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(122, 138, 143, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =1
+            Color: =RGBA(53, 61, 63, 1)
+            Fill: =RGBA(247, 250, 252, 1)
+            Height: =87
+            RadiusBottomLeft: =25
+            RadiusBottomRight: =25
+            RadiusTopLeft: =25
+            RadiusTopRight: =25
+            Text: =
+            Width: =420
+            X: =110
+            Y: =923
+      - Text34_17:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            Color: =RGBA(53, 61, 63, 1)
+            Font: =Font.Georgia
+            FontWeight: =FontWeight.Semibold
+            Height: =69
+            Size: =20
+            Text: =Char(10) & coverageRadius & " km radius"
+            Width: =342
+            Wrap: =false
+            X: =159
+            Y: =941
+      - Text34_18:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            Color: =RGBA(53, 61, 63, 0.31)
+            Font: =Font.Georgia
+            Height: =66
+            Size: =20
+            Text: |-
+              ="Toggle to become available for emergencies
+
+              "
+            Width: =483
+            X: =88
+            Y: =803
+      - Text34_19:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            Color: =RGBA(53, 61, 63, 0.31)
+            Font: =Font.Georgia
+            Height: =66
+            Size: =20
+            Text: |-
+              ="Coverage Area
+              "
+            Width: =147
+            X: =257
+            Y: =913
+      - tmrVolunteerActive:
+          Control: Timer@2.1.0
+          Properties:
+            AutoStart: =volunteerActive
+            Duration: =5000
+            OnTimerEnd: =Navigate(VolunteerActive, ScreenTransition.Cover)
+            Start: =volunteerActive
+            Visible: =false
+            Y: =1066
+      - Text1_3:
+          Control: ModernText@1.0.0
+          Properties:
+            Color: =RGBA(120, 0, 0, 1)
+            Font: =FontWeight.Bold
+            Height: =61
+            Size: =35
+            Text: ="CESR"
+            Width: =165
+            Wrap: =false
+            X: =36
+            Y: =35
+      - Text2_4:
+          Control: ModernText@1.0.0
+          Properties:
+            Color: =RGBA(120, 0, 0, 1)
+            Font: =FontWeight.Bold
+            Height: =71
+            Size: =17
+            Text: ="Community Emergency Support & Response"
+            Width: =224
+            X: =36
+            Y: =72

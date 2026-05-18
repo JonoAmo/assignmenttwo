@@ -1,0 +1,172 @@
+{
+  "Resources": [
+    {
+      "Name": "SampleImage",
+      "Schema": "i",
+      "IsSampleData": true,
+      "IsWritable": false,
+      "Type": "ResourceInfo",
+      "FileName": "/ctrllib/image/images/SampleImage.svg",
+      "Path": "/ctrllib/image/images/SampleImage.svg",
+      "Content": "Image",
+      "ResourceKind": "Uri",
+      "RootPath": "ms-appx:///ctrllib/image/images/SampleImage.svg"
+    },
+    {
+      "Name": "Screenshot 2026-05-11 at 5.52.15 pm",
+      "Schema": "i",
+      "IsSampleData": false,
+      "IsWritable": false,
+      "Type": "ResourceInfo",
+      "FileName": "0a733b4c-b8b1-4982-bbcf-09e318a94e20.png",
+      "Path": "Assets\\Images\\0a733b4c-b8b1-4982-bbcf-09e318a94e20.png",
+      "Content": "Image",
+      "ResourceKind": "LocalFile",
+      "RootPath": "https://dsprdil102seau.blob.core.windows.net/62822bb0-496f-477b-8d14-d709412d2514-1/resource/MGE3MzNiNGMtYjhiMS00OTgyLWJiY2YtMDllMzE4YTk0ZTIw.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2026-05-15T10%3A16%3A54Z&ske=2026-05-16T10%3A31%3A54Z&sks=b&skv=2023-01-03&sv=2023-01-03&spr=https&se=2026-05-16T10%3A31%3A54Z&sr=b&sp=r&sig=syQEiQFaiHanAxUf9krV8be5NArmpom3o85AKYiWKNE%3D"
+    },
+    {
+      "Name": "ChatGPT Image May 11, 2026, 06_01_04 PM",
+      "Schema": "i",
+      "IsSampleData": false,
+      "IsWritable": false,
+      "Type": "ResourceInfo",
+      "FileName": "90714b03-d92d-4e65-a86e-bfe5619de928.png",
+      "Path": "Assets\\Images\\90714b03-d92d-4e65-a86e-bfe5619de928.png",
+      "Content": "Image",
+      "ResourceKind": "LocalFile",
+      "RootPath": "https://dsprdil102seau.blob.core.windows.net/62822bb0-496f-477b-8d14-d709412d2514-1/resource/OTA3MTRiMDMtZDkyZC00ZTY1LWE4NmUtYmZlNTYxOWRlOTI4.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2026-05-15T10%3A16%3A54Z&ske=2026-05-16T10%3A31%3A54Z&sks=b&skv=2023-01-03&sv=2023-01-03&spr=https&se=2026-05-16T10%3A31%3A54Z&sr=b&sp=r&sig=u00OvgRrq%2F%2BcL4t2MTqrKzd53wGAykqSbP0KP0P%2FLaw%3D"
+    },
+    {
+      "Name": "ChatGPT Image May 11, 2026, 06_02_36 PM",
+      "Schema": "i",
+      "IsSampleData": false,
+      "IsWritable": false,
+      "Type": "ResourceInfo",
+      "FileName": "7a5991dd-e49d-40a9-878f-413cdf44f1e2.png",
+      "Path": "Assets\\Images\\7a5991dd-e49d-40a9-878f-413cdf44f1e2.png",
+      "Content": "Image",
+      "ResourceKind": "LocalFile",
+      "RootPath": "https://dsprdil102seau.blob.core.windows.net/62822bb0-496f-477b-8d14-d709412d2514-1/resource/N2E1OTkxZGQtZTQ5ZC00MGE5LTg3OGYtNDEzY2RmNDRmMWUy.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2026-05-15T10%3A16%3A54Z&ske=2026-05-16T10%3A31%3A54Z&sks=b&skv=2023-01-03&sv=2023-01-03&spr=https&se=2026-05-16T10%3A31%3A54Z&sr=b&sp=r&sig=hlEh%2BaNAFSVAtSywztCV8NWnzWopEZiS7vMJng0%2BSsc%3D"
+    },
+    {
+      "Name": "ChatGPT Image May 11, 2026, 06_11_56 PM",
+      "Schema": "i",
+      "IsSampleData": false,
+      "IsWritable": false,
+      "Type": "ResourceInfo",
+      "FileName": "e48e9382-fc16-433c-9219-99576597b6f0.png",
+      "Path": "Assets\\Images\\e48e9382-fc16-433c-9219-99576597b6f0.png",
+      "Content": "Image",
+      "ResourceKind": "LocalFile",
+      "RootPath": "https://dsprdil102seau.blob.core.windows.net/62822bb0-496f-477b-8d14-d709412d2514-1/resource/ZTQ4ZTkzODItZmMxNi00MzNjLTkyMTktOTk1NzY1OTdiNmYw.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2026-05-15T10%3A16%3A54Z&ske=2026-05-16T10%3A31%3A54Z&sks=b&skv=2023-01-03&sv=2023-01-03&spr=https&se=2026-05-16T10%3A31%3A54Z&sr=b&sp=r&sig=uxirvodYKr9WMz4lw4j0PDxqP355V9ClOz0YAsMpj8Y%3D"
+    },
+    {
+      "Name": "transparent-address-location-map-white-icon-symbol-7017516949747105tmb8ibsbd",
+      "Schema": "i",
+      "IsSampleData": false,
+      "IsWritable": false,
+      "Type": "ResourceInfo",
+      "FileName": "93bd0bf3-49b7-47a7-8fde-4735d81e4482.png",
+      "Path": "Assets\\Images\\93bd0bf3-49b7-47a7-8fde-4735d81e4482.png",
+      "Content": "Image",
+      "ResourceKind": "LocalFile",
+      "RootPath": "https://dsprdil102seau.blob.core.windows.net/62822bb0-496f-477b-8d14-d709412d2514-1/resource/OTNiZDBiZjMtNDliNy00N2E3LThmZGUtNDczNWQ4MWU0NDgy.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2026-05-15T10%3A16%3A54Z&ske=2026-05-16T10%3A31%3A54Z&sks=b&skv=2023-01-03&sv=2023-01-03&spr=https&se=2026-05-16T10%3A31%3A54Z&sr=b&sp=r&sig=OvVUJagIQyfyNrZHE5sRaR%2BTaNKuwVpfP36HNcN0ZlY%3D"
+    },
+    {
+      "Name": "clipart3476972",
+      "Schema": "i",
+      "IsSampleData": false,
+      "IsWritable": false,
+      "Type": "ResourceInfo",
+      "FileName": "c11b8508-8066-40ae-a63b-c41704072423.png",
+      "Path": "Assets\\Images\\c11b8508-8066-40ae-a63b-c41704072423.png",
+      "Content": "Image",
+      "ResourceKind": "LocalFile",
+      "RootPath": "https://dsprdil102seau.blob.core.windows.net/62822bb0-496f-477b-8d14-d709412d2514-1/resource/YzExYjg1MDgtODA2Ni00MGFlLWE2M2ItYzQxNzA0MDcyNDIz.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2026-05-15T10%3A16%3A54Z&ske=2026-05-16T10%3A31%3A54Z&sks=b&skv=2023-01-03&sv=2023-01-03&spr=https&se=2026-05-16T10%3A31%3A54Z&sr=b&sp=r&sig=k4lQpIwPiYE6pSz2sBVUeDBEiMke9z2R2F33eBcqkPg%3D"
+    },
+    {
+      "Name": "transparent_hands_heart_icon",
+      "Schema": "i",
+      "IsSampleData": false,
+      "IsWritable": false,
+      "Type": "ResourceInfo",
+      "FileName": "320be4e1-3cdc-42eb-a4ae-6f4150bfcda1.png",
+      "Path": "Assets\\Images\\320be4e1-3cdc-42eb-a4ae-6f4150bfcda1.png",
+      "Content": "Image",
+      "ResourceKind": "LocalFile",
+      "RootPath": "https://dsprdil102seau.blob.core.windows.net/62822bb0-496f-477b-8d14-d709412d2514-1/resource/MzIwYmU0ZTEtM2NkYy00MmViLWE0YWUtNmY0MTUwYmZjZGEx.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2026-05-15T10%3A16%3A54Z&ske=2026-05-16T10%3A31%3A54Z&sks=b&skv=2023-01-03&sv=2023-01-03&spr=https&se=2026-05-16T10%3A31%3A54Z&sr=b&sp=r&sig=dg4WQn3dT73EVkGtpy9P1p6aBnIEKl9oslDRRofVwyY%3D"
+    },
+    {
+      "Name": "LOGO",
+      "Schema": "i",
+      "IsSampleData": false,
+      "IsWritable": false,
+      "Type": "ResourceInfo",
+      "FileName": "291c2b8f-e5dd-4087-aae8-dc260cb2ef91.png",
+      "Path": "Assets\\Images\\291c2b8f-e5dd-4087-aae8-dc260cb2ef91.png",
+      "Content": "Image",
+      "ResourceKind": "LocalFile",
+      "RootPath": "https://dsprdil102seau.blob.core.windows.net/62822bb0-496f-477b-8d14-d709412d2514-1/resource/MjkxYzJiOGYtZTVkZC00MDg3LWFhZTgtZGMyNjBjYjJlZjkx.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2026-05-15T10%3A16%3A54Z&ske=2026-05-16T10%3A31%3A54Z&sks=b&skv=2023-01-03&sv=2023-01-03&spr=https&se=2026-05-16T10%3A31%3A54Z&sr=b&sp=r&sig=Sn2jCctA6Xs2zJSHBiqlTLOsfS7haTCEUY%2BG8gQl27o%3D"
+    },
+    {
+      "Name": "SampleCardImage",
+      "Schema": "i",
+      "IsSampleData": true,
+      "IsWritable": false,
+      "Type": "ResourceInfo",
+      "FileName": "/ctrllib/modernCard/images/SampleCardImage.svg",
+      "Path": "/ctrllib/modernCard/images/SampleCardImage.svg",
+      "Content": "Image",
+      "ResourceKind": "Uri",
+      "RootPath": "ms-appx:///ctrllib/modernCard/images/SampleCardImage.svg"
+    },
+    {
+      "Name": "SampleCardHeaderImage",
+      "Schema": "i",
+      "IsSampleData": true,
+      "IsWritable": false,
+      "Type": "ResourceInfo",
+      "FileName": "/ctrllib/modernCard/images/SampleCardHeaderImage.svg",
+      "Path": "/ctrllib/modernCard/images/SampleCardHeaderImage.svg",
+      "Content": "Image",
+      "ResourceKind": "Uri",
+      "RootPath": "ms-appx:///ctrllib/modernCard/images/SampleCardHeaderImage.svg"
+    },
+    {
+      "Name": "LOGO_1",
+      "Schema": "i",
+      "IsSampleData": false,
+      "IsWritable": false,
+      "Type": "ResourceInfo",
+      "FileName": "7b5edcc5-9767-4c94-b213-dfd2623c4d29.png",
+      "Path": "Assets\\Images\\7b5edcc5-9767-4c94-b213-dfd2623c4d29.png",
+      "Content": "Image",
+      "ResourceKind": "LocalFile",
+      "RootPath": "https://dsprdil102seau.blob.core.windows.net/62822bb0-496f-477b-8d14-d709412d2514-1/resource/N2I1ZWRjYzUtOTc2Ny00Yzk0LWIyMTMtZGZkMjYyM2M0ZDI5.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2026-05-15T10%3A16%3A54Z&ske=2026-05-16T10%3A31%3A54Z&sks=b&skv=2023-01-03&sv=2023-01-03&spr=https&se=2026-05-16T10%3A31%3A54Z&sr=b&sp=r&sig=WdafYG2P8KGlIvhFlmf%2BuNRpT7YCuJO7LoyYYDBvhhQ%3D"
+    },
+    {
+      "Name": "Screenshot 2026-05-12 at 6.56.10 pm",
+      "Schema": "i",
+      "IsSampleData": false,
+      "IsWritable": false,
+      "Type": "ResourceInfo",
+      "FileName": "57b79ce3-ea73-4163-b54c-0400efd3da5d.png",
+      "Path": "Assets\\Images\\57b79ce3-ea73-4163-b54c-0400efd3da5d.png",
+      "Content": "Image",
+      "ResourceKind": "LocalFile",
+      "RootPath": "https://dsprdil102seau.blob.core.windows.net/62822bb0-496f-477b-8d14-d709412d2514-1/resource/NTdiNzljZTMtZWE3My00MTYzLWI1NGMtMDQwMGVmZDNkYTVk.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2026-05-15T10%3A16%3A54Z&ske=2026-05-16T10%3A31%3A54Z&sks=b&skv=2023-01-03&sv=2023-01-03&spr=https&se=2026-05-16T10%3A31%3A54Z&sr=b&sp=r&sig=aMWEZm6KVQY2didATWXTlgGOTtpKEJu%2Bxpd1gUs%2FUhA%3D"
+    },
+    {
+      "Name": "Location Vector Icon White Transparent Background, Location Icons, Transparent Icons, White Icons PNG and Vector with Transparent Background for Free Download",
+      "Schema": "i",
+      "IsSampleData": false,
+      "IsWritable": false,
+      "Type": "ResourceInfo",
+      "FileName": "9ba4dea5-16e0-4639-8793-64ffaa551c5f.jpeg",
+      "Path": "Assets\\Images\\9ba4dea5-16e0-4639-8793-64ffaa551c5f.jpeg",
+      "Content": "Image",
+      "ResourceKind": "LocalFile",
+      "RootPath": "https://dsprdil102seau.blob.core.windows.net/62822bb0-496f-477b-8d14-d709412d2514-1/resource/OWJhNGRlYTUtMTZlMC00NjM5LTg3OTMtNjRmZmFhNTUxYzVm.jpeg?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2026-05-15T10%3A16%3A54Z&ske=2026-05-16T10%3A31%3A54Z&sks=b&skv=2023-01-03&sv=2023-01-03&spr=https&se=2026-05-16T10%3A31%3A54Z&sr=b&sp=r&sig=GHvKVQFXD4fy%2BHsz4XXDaVdIfQMcI1Tbvok1otAHWho%3D"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  LoadingScreen:
+    Properties:
+      Fill: =RGBA(245, 237, 225, 1)
+    Children:
+      - tmrGoToConfirmed_2:
+          Control: Timer@2.1.0
+          Properties:
+            AutoStart: =true
+            Duration: =2000
+            OnTimerEnd: =Navigate(HomeScreen, ScreenTransition.Cover)
+            Visible: =false
+            X: =40
+            Y: =40
+      - Image1:
+          Control: Image@2.2.3
+          Properties:
+            Height: =490
+            Image: =LOGO
+            Width: =490
+            X: =65
+            Y: =350
+      - Text18:
+          Control: ModernText@1.0.0
+          Properties:
+            Font: =Font.Georgia
+            Text: ="By Ctrl Alt Elite"
+            X: =210
+            Y: =982
+      - Text1_1:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            Color: =RGBA(120, 0, 0, 1)
+            Font: =FontWeight.Bold
+            FontWeight: =FontWeight.Bold
+            Height: =230
+            Size: =66
+            Text: ="CESR"
+            Width: =354
+            Wrap: =false
+            X: =133
+            Y: =148
+      - Text2_2:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            Color: =RGBA(120, 0, 0, 0.1)
+            Font: =FontWeight.Bold
+            Height: =175
+            Size: =30
+            Text: ="Community Emergency Support & Response"
+            Width: =553
+            X: =33
+            Y: =256

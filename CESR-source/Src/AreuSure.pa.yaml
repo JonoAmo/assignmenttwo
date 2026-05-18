@@ -1,0 +1,104 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  AreuSure:
+    Properties:
+      Fill: =RGBA(240, 240, 240, 1)
+    Children:
+      - Icon13:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            Color: =RGBA(189, 49, 51, 1)
+            Height: =338
+            Icon: =Icon.Warning
+            OnSelect: |-
+              =Set(
+                  vPatientRequest,
+                  Patch(
+                      PatientRequests,
+                      LookUp(PatientRequests, ID = vPatientRequest.ID),
+                      {
+                          RequestStatus: {Value: "Cancelled"}
+                      }
+                  )
+              );
+
+              Notify("Request cancelled", NotificationType.Warning);
+
+              Navigate(HomeScreen, ScreenTransition.Fade)
+            Width: =401
+            X: =136
+            Y: =204
+      - Text15:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            Font: =Font.Lato
+            Height: =205
+            OnSelect: |-
+              =Set(
+                  vPatientRequest,
+                  Patch(
+                      PatientRequests,
+                      LookUp(PatientRequests, ID = vPatientRequest.ID),
+                      {
+                          RequestStatus: {Value: "Cancelled"}
+                      }
+                  )
+              );
+
+              Notify("Request cancelled", NotificationType.Warning);
+
+              Navigate(HomeScreen, ScreenTransition.Fade)
+            Text: ="Are you sure you want to cancel the help request? "
+            Width: =545
+            X: =64
+            Y: =529
+      - Text27:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(189, 49, 51, 1)
+            OnSelect: |-
+              =Set(
+                  vPatientRequest,
+                  Patch(
+                      PatientRequests,
+                      LookUp(PatientRequests, ID = vPatientRequest.ID),
+                      {
+                          RequestStatus: {Value: "Cancelled"}
+                      }
+                  )
+              );
+
+              Notify("Request cancelled", NotificationType.Warning);
+
+              Navigate(HomeScreen, ScreenTransition.Fade)
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Text: ="Yes"
+            X: =349
+            Y: =717
+      - Text27_1:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 132, 255, 1)
+            OnSelect: =Navigate(Rescueconfirmed,ScreenTransition.UnCoverRight)
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Text: ="No"
+            X: =124
+            Y: =717

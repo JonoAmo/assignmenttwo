@@ -1,0 +1,646 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  AcceptedEmergencyScreen:
+    Properties:
+      Fill: =RGBA(247, 250, 252, 1)
+      OnVisible: =Set(vActionStatus, vSavedEmergency.Statues.Value)
+    Children:
+      - Text33_15:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(122, 138, 143, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0.5
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(122, 138, 143, 1)
+            Height: =189
+            RadiusBottomLeft: =50
+            RadiusBottomRight: =50
+            Text: =
+            Width: =640
+            Y: =152
+      - Map3_1:
+          Control: Map@1.8.27
+          Properties:
+            BorderColor: =
+            BorderRadius: =1
+            CurrentLocation: =true
+            DefaultLatitude: =Location.Latitude
+            DefaultLongitude: =Location.Longitude
+            DefaultZoomLevel: =15
+            Height: =533
+            Items: =mapLocation
+            ItemsLabels: ="Name"
+            ItemsLatitudes: ="Latitude"
+            ItemsLongitudes: ="Longitude"
+            Width: =640
+            Y: =498
+      - Text33_12:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(122, 138, 143, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0.5
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =292
+            RadiusBottomLeft: =25
+            RadiusBottomRight: =25
+            RadiusTopLeft: =25
+            RadiusTopRight: =25
+            Text: =
+            Width: =640
+            Y: =268
+      - Text33_19:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(122, 138, 143, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0.5
+            Color: =RGBA(189, 49, 51, 1)
+            Fill: =RGBA(189, 49, 51, 0.28)
+            FontWeight: =FontWeight.Bold
+            Height: =42
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Size: =20
+            Text: =vAcceptedEmergencyType
+            Width: =177
+            X: =422
+            Y: =341
+      - Text33_17:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(122, 138, 143, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0.5
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =299
+            RadiusTopLeft: =50
+            RadiusTopRight: =50
+            Text: =
+            Width: =640
+            Y: =836
+      - Text33_11:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(122, 138, 143, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0.5
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =189
+            RadiusBottomLeft: =50
+            RadiusBottomRight: =50
+            Text: =
+            Width: =640
+      - Text34_25:
+          Control: ModernText@1.0.0
+          Properties:
+            Color: =RGBA(53, 61, 63, 0.31)
+            Font: =Font.Georgia
+            Height: =52
+            Size: =20
+            Text: ="CESR Responder"
+            Width: =266
+            X: =136
+            Y: =41
+      - Image6_2:
+          Control: Image@2.2.3
+          Properties:
+            Height: =79
+            Image: ='Screenshot 2026-05-12 at 6.56.10 pm'
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Width: =80
+            X: =40
+            Y: =45
+      - Text34_26:
+          Control: ModernText@1.0.0
+          Properties:
+            Color: =RGBA(53, 61, 63, 0.31)
+            Font: =Font.Georgia
+            FontWeight: =FontWeight.Bold
+            Height: =52
+            Size: =25
+            Text: =vResponderName
+            Width: =266
+            X: =136
+            Y: =84
+      - Text34_27:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            Color: =RGBA(52, 152, 47, 1)
+            Font: =Font.Georgia
+            FontWeight: =FontWeight.Bold
+            Height: =52
+            Size: =25
+            Text: ="Active"
+            Width: =186
+            X: =418
+            Y: =58
+      - Circle5_3:
+          Control: Circle@2.3.0
+          Properties:
+            Fill: =RGBA(52, 152, 47, 1)
+            Height: =35
+            Width: =35
+            X: =415
+            Y: =69
+      - Text34_28:
+          Control: ModernText@1.0.0
+          Properties:
+            Color: =RGBA(53, 61, 63, 0.31)
+            Font: =Font.Georgia
+            FontWeight: =FontWeight.Bold
+            Height: =52
+            Size: =20
+            Text: |-
+              ="Age: " & vAcceptedAge & " years old"
+            Width: =266
+            X: =120
+            Y: =331
+      - Text34_29:
+          Control: ModernText@1.0.0
+          Properties:
+            Color: =RGBA(53, 61, 63, 1)
+            Font: =Font.Georgia
+            FontWeight: =FontWeight.Bold
+            Height: =52
+            Size: =20
+            Text: =vAcceptedName
+            Width: =298
+            X: =120
+            Y: =289
+      - Text34_31:
+          Control: ModernText@1.0.0
+          Properties:
+            Color: =RGBA(53, 61, 63, 0.31)
+            Font: =Font.Georgia
+            Height: =48
+            Size: =20
+            Text: |-
+              ="Reported condition: "
+            Width: =344
+            X: =25
+            Y: =400
+      - Text34_32:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Right
+            Color: =RGBA(53, 61, 63, 0.31)
+            Font: =Font.Georgia
+            Height: =54
+            Size: =20
+            Text: =vAcceptedApproxLocation
+            Width: =303
+            X: =301
+            Y: =445
+      - Text34_33:
+          Control: ModernText@1.0.0
+          Properties:
+            Color: =RGBA(53, 61, 63, 0.31)
+            Font: =Font.Georgia
+            Height: =38
+            Size: =20
+            Text: ="Direction:"
+            Width: =266
+            X: =25
+            Y: =503
+      - Text34_35:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(40, 134, 222, 0.3)
+            Font: =Font.Georgia
+            Height: =43
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Size: =20
+            Text: =vEstimatedTime & " minutes"
+            Width: =175
+            X: =19
+            Y: =634
+      - Text34_36:
+          Control: ModernText@1.0.0
+          Properties:
+            Color: =RGBA(53, 61, 63, 0.31)
+            Font: =Font.Georgia
+            FontWeight: =FontWeight.Bold
+            Height: =62
+            Size: =20
+            Text: =vAcceptedGender
+            Width: =129
+            X: =475
+            Y: =284
+      - Text34_41:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Bold
+            Height: =52
+            Size: =20
+            Text: |-
+              ="Reported " &
+              If(
+                  vAcceptedReportedSeconds < 60,
+                  vAcceptedReportedSeconds & " seconds ago",
+                  If(
+                      RoundDown(vAcceptedReportedSeconds / 60, 0) = 1,
+                      "1 minute ago",
+                      RoundDown(vAcceptedReportedSeconds / 60, 0) & " minutes ago"
+                  )
+              )
+            Width: =266
+            X: =181
+            Y: =200
+      - Icon14_3:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            Color: =RGBA(132, 40, 38, 1)
+            Icon: =Icon.Person
+            X: =36
+            Y: =295
+      - Text33_18:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(122, 138, 143, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0.5
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(245, 29, 0, 0.2)
+            Height: =77
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Text: =
+            Width: =77
+            X: =30
+            Y: =289
+      - Text34_44:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Right
+            Color: =RGBA(53, 61, 63, 0.31)
+            Font: =Font.Georgia
+            Height: =42
+            Size: =20
+            Text: =vAcceptedExactLocation
+            Width: =310
+            X: =294
+            Y: =503
+      - Text34_45:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Right
+            Color: =RGBA(53, 61, 63, 0.31)
+            Font: =Font.Georgia
+            Height: =39
+            Size: =20
+            Text: =vAcceptedMedicalCondition
+            Width: =294
+            X: =310
+            Y: =405
+      - Rectangle4_9:
+          Control: Rectangle@2.3.0
+          Properties:
+            Fill: =RGBA(53, 61, 63, 1)
+            Height: =0.5
+            Width: =590
+            X: =25
+            Y: =493
+      - Rectangle4_8:
+          Control: Rectangle@2.3.0
+          Properties:
+            Fill: =RGBA(53, 61, 63, 1)
+            Height: =0.5
+            Width: =590
+            X: =20
+            Y: =448
+      - Text34_42:
+          Control: ModernText@1.0.0
+          Properties:
+            Color: =RGBA(53, 61, 63, 0.31)
+            Font: =Font.Georgia
+            Height: =38
+            Size: =20
+            Text: |-
+              ="Location: "
+            Width: =266
+            X: =25
+            Y: =455
+      - Text34_46:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(40, 134, 222, 0.3)
+            Font: =Font.Georgia
+            Height: =47
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Size: =20
+            Text: =Text(vAcceptedDistance, "0.0") & " km away"
+            Width: =155
+            X: =19
+            Y: =573
+      - Text33_20:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(122, 138, 143, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0.5
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(79, 90, 94, 0.21)
+            Height: =143
+            RadiusBottomLeft: =25
+            RadiusBottomRight: =25
+            RadiusTopLeft: =25
+            RadiusTopRight: =25
+            Text: =
+            Width: =640
+            Y: =993
+      - Text31_2:
+          Control: ModernText@1.0.0
+          Properties:
+            Color: =RGBA(0, 0, 0, 1)
+            Font: =Font.Georgia
+            FontWeight: =FontWeight.Bold
+            Height: =65
+            Size: =22
+            Text: ="Message the patient below:"
+            Width: =365
+            X: =30
+            Y: =993
+      - txtResponderMessage:
+          Control: ModernTextInput@1.1.0
+          Properties:
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =TextMode.MultiLine
+            Fill: =RGBA(53, 61, 63, 0.14)
+            Height: =58
+            Placeholder: ="""Type a message to the patient..."""
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Size: =14
+            Width: =427
+            X: =30
+            Y: =1058
+      - Icon1:
+          Control: ModernIcon@1.1.0
+          Properties:
+            Icon: ="Send"
+            IconColor: =RGBA(0, 0, 0, 1)
+            IconStyle: =IconStyle.Filled
+            OnSelect: |-
+              =If(
+                  IsBlank(txtResponderMessage.Text),
+                  Notify("Please type a message first.", NotificationType.Error),
+
+                  Set(
+                      vSavedEmergency,
+                      Patch(
+                          Incidents_2,
+                          LookUp(Incidents_2, ID = vSavedEmergency.ID),
+                          {
+                              ResponderMessage:
+                                  Coalesce(
+                                      LookUp(Incidents_2, ID = vSavedEmergency.ID).ResponderMessage,
+                                      ""
+                                  ) &
+                                  If(
+                                      IsBlank(LookUp(Incidents_2, ID = vSavedEmergency.ID).ResponderMessage),
+                                      "",
+                                      Char(10) & Char(10)
+                                  ) &
+                                  Text(Now(), "hh:mm AM/PM") &
+                                  " - Responder: " &
+                                  txtResponderMessage.Text
+                          }
+                      )
+                  );
+
+                  Notify("Message saved to SharePoint", NotificationType.Success);
+                  Reset(txtResponderMessage)
+              )
+            X: =535
+            Y: =1058
+      - Text33_22:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(122, 138, 143, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0.5
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: |-
+              =If(
+                  vActionStatus = "On the way",
+                  RGBA(97, 2, 2, 1),
+                  RGBA(0, 4, 255, 25)
+              )
+            FontWeight: =FontWeight.Bold
+            Height: =42
+            OnSelect: |-
+              =Set(
+                  vSavedEmergency,
+                  Patch(
+                      Incidents_2,
+                      LookUp(Incidents_2, ID = vSavedEmergency.ID),
+                      {
+                          Statues: {Value: "On the way"}
+                      }
+                  )
+              );
+
+              Set(vActionStatus, "On the way");
+
+              Notify("Status updated: On the way", NotificationType.Success)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =20
+            Text: ="Mark En route"
+            Width: =177
+            X: =120
+            Y: =872
+      - Text33_23:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(122, 138, 143, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0.5
+            Color: =RGBA(0, 0, 0, 1)
+            Fill: |-
+              =If(
+                  vActionStatus = "Completed",
+                  RGBA(97, 2, 2, 1),
+                  RGBA(210, 210, 210, 25)
+              )
+            FontWeight: =FontWeight.Bold
+            Height: =42
+            OnSelect: |-
+              =Set(
+                  vSavedEmergency,
+                  Patch(
+                      Incidents_2,
+                      LookUp(Incidents_2, ID = vSavedEmergency.ID),
+                      {
+                          Statues: {Value: "Completed"}
+                      }
+                  )
+              );
+
+              Set(vActionStatus, "Completed");
+
+              Notify("Emergency completed", NotificationType.Success);
+
+              Navigate(ResolvedScreen, ScreenTransition.Fade)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =20
+            Text: ="Resloved"
+            Width: =177
+            X: =327
+            Y: =932
+      - Text33_24:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(122, 138, 143, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0.5
+            Color: =RGBA(189, 49, 51, 1)
+            Fill: =RGBA(189, 49, 51, 0.28)
+            FontWeight: =FontWeight.Bold
+            Height: =42
+            OnSelect: |-
+              =Set(
+                  vSavedEmergency,
+                  Patch(
+                      Incidents_2,
+                      LookUp(Incidents_2, ID = vSavedEmergency.ID),
+                      {
+                          Statues: {Value: "Cancelled"}
+                      }
+                  )
+              );
+
+              Notify("Emergency cancelled", NotificationType.Warning);
+
+              Navigate(VolunteerScreen, ScreenTransition.Fade)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =20
+            Text: ="Cancel"
+            Width: =177
+            X: =120
+            Y: =932
+      - Text33_25:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(122, 138, 143, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0.5
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: |-
+              =If(
+                  vActionStatus = "Arrived",
+                  RGBA(97, 2, 2, 1),
+                  RGBA(54, 176, 75, 25)
+              )
+            FontWeight: =FontWeight.Bold
+            Height: =42
+            OnSelect: |-
+              =Set(
+                  vSavedEmergency,
+                  Patch(
+                      Incidents_2,
+                      LookUp(Incidents_2, ID = vSavedEmergency.ID),
+                      {
+                          Statues: {Value: "Arrived"}
+                      }
+                  )
+              );
+
+              Set(vActionStatus, "Arrived");
+
+              Notify("Status updated: Arrived", NotificationType.Success)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =20
+            Text: ="Arrived"
+            Width: =177
+            X: =327
+            Y: =872
+      - Icon2:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            Color: =RGBA(0, 0, 0, 1)
+            Fill: |-
+              =If(
+                  vActionStatus = "Completed",
+                  RGBA(97, 2, 2, 1),
+                  RGBA(210, 210, 210, 25)
+              )
+            Height: =42
+            Icon: =Icon.CheckBadge
+            OnSelect: |-
+              =Set(
+                  vSavedEmergency,
+                  Patch(
+                      Incidents_2,
+                      LookUp(Incidents_2, ID = vSavedEmergency.ID),
+                      {
+                          Statues: {Value: "Completed"}
+                      }
+                  )
+              );
+
+              Set(vActionStatus, "Completed");
+
+              Notify("Emergency completed", NotificationType.Success);
+
+              Navigate(ResolvedScreen, ScreenTransition.Fade)
+            Width: =19
+            X: =347
+            Y: =932

@@ -1,0 +1,376 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  Rescueconfirmed:
+    Properties:
+      Fill: =RGBA(240, 240, 240, 1)
+      OnVisible: |+
+        =Set(
+            responderName,
+            Index(
+                [
+                    "Ahmed",
+                    "Sarah",
+                    "Mohammed",
+                    "Lina",
+                    "Omar",
+                    "Fatima",
+                    "James",
+                    "Maya"
+                ],
+                RandBetween(1, 8)
+            ).Value
+        );
+
+        Set(
+            estimatedTime,
+            RandBetween(1, 15)
+        )
+
+    Children:
+      - Text40_3:
+          Control: ModernText@1.0.0
+          Properties:
+            BorderColor: =RGBA(21, 68, 18, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0.5
+            Fill: =RGBA(214, 221, 224, 1)
+            Height: =131
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Text: =
+            Width: =640
+            Y: =611
+      - Text40_1:
+          Control: ModernText@1.0.0
+          Properties:
+            BorderColor: =RGBA(21, 68, 18, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0.5
+            Fill: =RGBA(54, 176, 75, 0.26)
+            Height: =131
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Text: =
+            Width: =640
+            Y: =476
+      - Text40:
+          Control: ModernText@1.0.0
+          Properties:
+            BorderColor: =RGBA(13, 50, 61, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0.5
+            Fill: =RGBA(12, 59, 94, 0.26)
+            Height: =205
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Text: =
+            Width: =640
+            Y: =264
+      - Text16:
+          Control: ModernText@1.0.0
+          Properties:
+            Text: ="Found"
+            X: =40
+            Y: =40
+      - Text5_1:
+          Control: ModernText@1.0.0
+          Properties:
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(54, 176, 75, 1)
+            Font: =Font.Georgia
+            Height: =151
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            Size: =40
+            Text: ="   Help is on the way"
+            VerticalAlign: =VerticalAlign.Bottom
+            Width: =640
+      - tmrPulse2_1:
+          Control: Timer@2.1.0
+          Properties:
+            AutoStart: =true
+            Duration: =1000
+            Repeat: =true
+            Visible: =false
+            X: =12
+            Y: =200
+      - Text8_1:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            Font: =Font.Georgia
+            Height: =82 + (tmrPulse2_1.Value / 100)
+            Size: =45
+            Text: ="Found responder!"
+            Width: =548 + (tmrPulse2_1.Value / 100)
+            X: =72
+            Y: =164
+      - tmrGoToConfirmed_1:
+          Control: Timer@2.1.0
+          Properties:
+            AutoStart: =true
+            Duration: =15000
+            OnTimerEnd: =Navigate(Rescueconfirmed, ScreenTransition.Fade)
+            Visible: =false
+            X: =40
+            Y: =40
+      - Icon14:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            Color: =RGBA(0, 81, 100, 1)
+            Icon: =Icon.Person
+            X: =30
+            Y: =304
+      - Text19:
+          Control: ModernText@1.0.0
+          Properties:
+            Color: =RGBA(0, 0, 0, 1)
+            Font: =Font.Lato
+            Height: =52
+            Size: =15
+            Text: ="Estimated Arrival"
+            Width: =312
+            X: =63
+            Y: =487
+      - Label2:
+          Control: Label@2.5.1
+          Properties:
+            Font: =Font.Georgia
+            Height: =68
+            Text: '=vAssignedResponder '
+            Width: =492
+            X: =102
+            Y: =291
+      - Text20:
+          Control: ModernText@1.0.0
+          Properties:
+            Font: =Font.Georgia
+            Size: =14
+            Text: ="Certified First Responder"
+            X: =102
+            Y: =336
+      - txtPatientMessage:
+          Control: Classic/TextInput@2.3.2
+          Properties:
+            Default: =
+            FontWeight: =FontWeight.Lighter
+            Height: =36
+            HintText: ="Type a message to the responder..."
+            LineHeight: =1.5
+            Mode: =TextMode.MultiLine
+            Size: =8
+            Width: =320
+            X: =24
+            Y: =687
+      - Label4:
+          Control: Label@2.5.1
+          Properties:
+            Font: =Font.Georgia
+            Height: =58
+            Size: =16
+            Text: ="Message " &  vAssignedResponder
+            Width: =355
+            X: =24
+            Y: =626
+      - Icon15:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            Color: =RGBA(0, 81, 100, 1)
+            Icon: =Icon.Phone
+            Rotation: =270
+            X: =530
+            Y: =310
+      - tmrGoToConfirmed_3:
+          Control: Timer@2.1.0
+          Properties:
+            AutoStart: =true
+            Duration: =20000
+            OnTimerEnd: =Navigate(ishelpdone, ScreenTransition.Fade)
+            Visible: =false
+            X: =360
+            Y: =30
+      - Button5:
+          Control: ModernButton@1.0.0
+          Properties:
+            BasePaletteColor: =RGBA(8, 222, 8, 1)
+            Height: =37
+            Icon: ="Send"
+            Layout: =ButtonLayout.IconOnly
+            OnSelect: |-
+              =If(
+                  IsBlank(txtPatientMessage.Text),
+                  Notify("Please type a message first.", NotificationType.Error),
+
+                  Set(
+                      vPatientRequest,
+                      Patch(
+                          PatientRequests,
+                          LookUp(PatientRequests, ID = vPatientRequest.ID),
+                          {
+                              PatientMessage:
+                                  Coalesce(
+                                      LookUp(PatientRequests, ID = vPatientRequest.ID).PatientMessage,
+                                      ""
+                                  ) &
+                                  If(
+                                      IsBlank(LookUp(PatientRequests, ID = vPatientRequest.ID).PatientMessage),
+                                      "",
+                                      Char(10) & Char(10)
+                                  ) &
+                                  Text(Now(), "hh:mm AM/PM") &
+                                  " - Patient: " &
+                                  txtPatientMessage.Text
+                          }
+                      )
+                  );
+
+                  Notify("Message sent", NotificationType.Success);
+                  Reset(txtPatientMessage)
+              )
+            Width: =91
+            X: =454
+            Y: =687
+      - Icon27:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =37
+            Icon: =Icon.Message
+            Rotation: =
+            Width: =76
+            X: =24
+            Y: =401
+      - Text20_1:
+          Control: ModernText@1.0.0
+          Properties:
+            Font: =Font.Georgia
+            Size: =14
+            Text: ="''" & vPatientRequest.ResponderMessage & "''"
+            Width: =342
+            X: =94
+            Y: =392
+      - Text5_3:
+          Control: ModernText@1.0.0
+          Properties:
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.Georgia
+            Height: =72
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            Text: ="       Emergency Active"
+            VerticalAlign: =VerticalAlign.Top
+            Width: =640
+      - Circle5:
+          Control: Circle@2.3.0
+          Properties:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =18
+            Width: =18
+            X: =12
+            Y: =12
+      - Icon28:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            Color: =RGBA(255, 255, 255, 1)
+            Icon: =Icon.Home
+            X: =530
+            Y: =40
+      - Icon29:
+          Control: ModernIcon@1.1.0
+          Properties:
+            Icon: ="Clock"
+            IconColor: =RGBA(54, 176, 75, 1)
+            X: =20
+            Y: =508
+      - Text19_1:
+          Control: ModernText@1.0.0
+          Properties:
+            Color: =RGBA(0, 0, 0, 1)
+            Font: =Font.'Lato Black'
+            Height: =52
+            Text: = vEstimatedTimeArrival & " minutes"
+            Width: =568
+            X: =62
+            Y: =518
+      - Text40_2:
+          Control: ModernText@1.0.0
+          Properties:
+            BorderColor: =RGBA(13, 50, 61, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0.5
+            Fill: =RGBA(12, 59, 94, 0.26)
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Text: =
+            Width: =570
+            X: =24
+            Y: =394
+      - Text19_2:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            Color: =RGBA(255, 0, 0, 1)
+            Fill: =RGBA(255, 184, 174, 1)
+            Font: =Font.'Lato Black'
+            Height: =63
+            OnSelect: |-
+              =
+
+              Navigate(AreuSure, ScreenTransition.Fade)
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Text: ="Cancel "
+            Width: =320
+            Y: =1073
+      - Text19_3:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(45, 128, 40, 1)
+            Font: =Font.'Lato Black'
+            Height: =63
+            OnSelect: |-
+              =
+              Set(
+                  vPatientRequest,
+                  Patch(
+                      PatientRequests,
+                      LookUp(PatientRequests, ID = vPatientRequest.ID),
+                      {
+                          RequestStatus: {Value: "Completed"}
+                      }
+                  )
+              );
+
+              Notify("Request completed", NotificationType.Success);
+
+
+
+
+              Navigate(DoneHelp, ScreenTransition.Fade)
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Text: ="Completed"
+            Width: =320
+            X: =320
+            Y: =1073

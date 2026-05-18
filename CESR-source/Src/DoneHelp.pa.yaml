@@ -1,0 +1,225 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  DoneHelp:
+    Properties:
+      Fill: =RGBA(245, 237, 225, 1)
+      OnVisible: =Set(userRating, 0)
+    Children:
+      - Text25:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            Color: =RGBA(0, 0, 0, 1)
+            Font: =Font.Georgia
+            Height: =205
+            Size: =45
+            Text: ="Glad you are feeling better now"
+            Width: =492
+            X: =74
+            Y: =326
+      - Text34_9:
+          Control: ModernText@1.0.0
+          Properties:
+            Fill: =RGBA(156, 146, 134, 1)
+            Height: =238
+            PaddingTop: =10
+            RadiusBottomLeft: =50
+            RadiusBottomRight: =50
+            RadiusTopLeft: =50
+            RadiusTopRight: =50
+            Text: =
+            Width: =568
+            X: =36
+            Y: =638
+      - Text34_10:
+          Control: ModernText@1.0.0
+          Properties:
+            Fill: =RGBA(107, 100, 91, 0.24)
+            Height: =220
+            PaddingTop: =10
+            RadiusBottomLeft: =50
+            RadiusBottomRight: =50
+            RadiusTopLeft: =50
+            RadiusTopRight: =50
+            Text: =
+            Width: =555
+            X: =41
+            Y: =647
+      - Icon17:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =131
+            Icon: =Icon.NextArrow
+            OnSelect: =Navigate(HomeScreen, ScreenTransition.Fade)
+            Width: =125
+            X: =471
+            Y: =951
+      - Text34_1:
+          Control: ModernText@1.0.0
+          Properties:
+            Color: =RGBA(160, 64, 8, 1)
+            Fill: =RGBA(245, 245, 245, 1)
+            Height: =142
+            PaddingTop: =10
+            RadiusBottomLeft: =50
+            RadiusBottomRight: =50
+            RadiusTopLeft: =50
+            RadiusTopRight: =50
+            Text: =
+            Width: =478
+            X: =73
+            Y: =686
+      - Text33_1:
+          Control: ModernText@1.0.0
+          Properties:
+            Align: =Align.Center
+            Color: =RGBA(53, 61, 63, 1)
+            Font: =Font.Georgia
+            Height: =67
+            Text: ="Rate the responder"
+            Width: =447
+            X: =88
+            Y: =695
+      - Star1:
+          Control: Star@2.4.0
+          Variant: 5Points
+          Properties:
+            BorderColor: =If(userRating >= 1, RGBA(97, 2, 2, 1), RGBA(180, 180, 180, 1))
+            Fill: =If(userRating >= 1, RGBA(97, 2, 2, 1), RGBA(180, 180, 180, 1))
+            Height: =55
+            OnSelect: |-
+              =Set(userRating, 1);
+
+              Set(
+                  vPatientRequest,
+                  Patch(
+                      PatientRequests,
+                      LookUp(PatientRequests, ID = vPatientRequest.ID),
+                      {
+                          ResponderRating: userRating
+                      }
+                  )
+              );
+
+              Notify("Rating saved", NotificationType.Success);
+
+              Navigate(Thankscreen, ScreenTransition.Fade)
+            Width: =55
+            X: =134
+            Y: =762
+      - Star1_1:
+          Control: Star@2.4.0
+          Variant: 5Points
+          Properties:
+            BorderColor: =If(userRating >= 2, RGBA(97, 2, 2, 1), RGBA(180, 180, 180, 1))
+            Fill: =If(userRating >= 2, RGBA(97, 2, 2, 1), RGBA(180, 180, 180, 1))
+            Height: =55
+            OnSelect: |-
+              =Set(userRating, 2);
+
+              Set(
+                  vPatientRequest,
+                  Patch(
+                      PatientRequests,
+                      LookUp(PatientRequests, ID = vPatientRequest.ID),
+                      {
+                          ResponderRating: userRating
+                      }
+                  )
+              );
+
+              Notify("Rating saved", NotificationType.Success);
+
+              Navigate(Thankscreen, ScreenTransition.Fade)
+            Width: =55
+            X: =216
+            Y: =762
+      - Star1_2:
+          Control: Star@2.4.0
+          Variant: 5Points
+          Properties:
+            BorderColor: =If(userRating >= 3, RGBA(97, 2, 2, 1), RGBA(180, 180, 180, 1))
+            Fill: =If(userRating >= 3, RGBA(97, 2, 2, 1), RGBA(180, 180, 180, 1))
+            Height: =55
+            OnSelect: |-
+              =Set(userRating, 3);
+
+              Set(
+                  vPatientRequest,
+                  Patch(
+                      PatientRequests,
+                      LookUp(PatientRequests, ID = vPatientRequest.ID),
+                      {
+                          ResponderRating: userRating
+                      }
+                  )
+              );
+
+              Notify("Rating saved", NotificationType.Success);
+
+              Navigate(Thankscreen, ScreenTransition.Fade)
+            Width: =55
+            X: =293
+            Y: =762
+      - Star1_3:
+          Control: Star@2.4.0
+          Variant: 5Points
+          Properties:
+            BorderColor: =If(userRating >= 4, RGBA(97, 2, 2, 1), RGBA(180, 180, 180, 1))
+            Fill: =If(userRating >= 4, RGBA(97, 2, 2, 1), RGBA(180, 180, 180, 1))
+            Height: =55
+            OnSelect: |-
+              =Set(userRating, 4);
+
+              Set(
+                  vPatientRequest,
+                  Patch(
+                      PatientRequests,
+                      LookUp(PatientRequests, ID = vPatientRequest.ID),
+                      {
+                          ResponderRating: userRating
+                      }
+                  )
+              );
+
+              Notify("Rating saved", NotificationType.Success);
+
+              Navigate(Thankscreen, ScreenTransition.Fade)
+            Width: =55
+            X: =374
+            Y: =762
+      - Star1_4:
+          Control: Star@2.4.0
+          Variant: 5Points
+          Properties:
+            BorderColor: =If(userRating >= 5, RGBA(97, 2, 2, 1), RGBA(180, 180, 180, 1))
+            Fill: =If(userRating >= 5, RGBA(97, 2, 2, 1), RGBA(180, 180, 180, 1))
+            Height: =55
+            OnSelect: |-
+              =Set(userRating, 5);
+
+              Set(
+                  vPatientRequest,
+                  Patch(
+                      PatientRequests,
+                      LookUp(PatientRequests, ID = vPatientRequest.ID),
+                      {
+                          ResponderRating: userRating
+                      }
+                  )
+              );
+
+              Notify("Rating saved", NotificationType.Success);
+
+              Navigate(Thankscreen, ScreenTransition.Fade)
+            Width: =55
+            X: =447
+            Y: =762
